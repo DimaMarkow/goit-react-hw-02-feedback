@@ -40,11 +40,16 @@ class Feedback extends React.Component {
 
   render() {
     const { good, neutral, bad } = this.state;
+    const buttonOptions = Object.keys(this.state);
+    console.log(buttonOptions);
 
     return (
       <div className={css.wrapper}>
         <Section title="Please leave feedback">
-          <FeedbackOptions onLeaveFeedback={this.handleClick}></FeedbackOptions>
+          <FeedbackOptions
+            options={buttonOptions}
+            onLeaveFeedback={this.handleClick}
+          ></FeedbackOptions>
         </Section>
 
         <Section title="Statistics">
