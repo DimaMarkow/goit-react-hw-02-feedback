@@ -6,7 +6,7 @@ import css from 'components/Feedback/feedback.module.css';
 class FeedbackOptions extends React.Component {
   render() {
     const elements = this.props.options.map(element => (
-      <p key={element}>
+      <p key={element} className={css.text}>
         <button
           className={css.btn}
           type="button"
@@ -25,5 +25,6 @@ class FeedbackOptions extends React.Component {
 export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(string),
+  onLeaveFeedback: PropTypes.func.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

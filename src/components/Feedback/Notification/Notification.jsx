@@ -11,5 +11,5 @@ class Notification extends React.Component {
 export default Notification;
 
 Notification.propTypes = {
-  message: PropTypes.number.isRequired,
+  message: PropTypes.string.isRequired,
 };

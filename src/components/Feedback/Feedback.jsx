@@ -35,7 +35,7 @@ class Feedback extends React.Component {
       return 0;
     }
     const value = this.state.good;
-    const result = ((value / total) * 100).toFixed(2);
+    const result = ((value / total) * 100).toFixed(0);
     return Number(result);
   };
 
